@@ -1,0 +1,58 @@
+# Assignment Prog. Movel
+
+## Description
+For this assignment you are required to create an Android App client, for a web app that exposes a JSON REST API that allows for GET and POST requests.
+
+## Scenario
+Suppose that you have a webapp/website at the address http://www.facebook.com and that it has an API exposed at http://www.facebook.com/api/v2, 
+ - to get all the posts from this webapp you will need to access the following http://www.facebook.com/api/v2/posts
+ - to get a specific post you will need to access the following http://www.facebook.com/api/v2/posts/postid
+ - to get comments for a specific post you will need to access the following http://www.facebook.com/api/v2/comments/postid
+ Note that each website/webapp has different structure.
+ For each of the project, you will have to work closely with your lecturer to help you understand how the specific site works.
+
+
+## WebApp / Web Sites
+### Music Promo www.musicapromo.net a music blog
+
+A list of musics can be accessed through: http://www.musicapromo.net/wp-json/wp/v2/music
+A specific music can be accessed through: http://www.musicapromo.net/wp-json/wp/v2/music/id
+
+### Emprego Sociomatico http://emprego.sociomatico.com a jobs platform
+http://emprego.sociomatico.com/wp-json/wp/v2/
+
+### Noticias Sociomatico http://www.sociomatico.com a News platform
+
+http://www.sociomatico.com/wp-json/wp/v2/
+
+### Txungamoyo http://www.txungamoyo.com/ an e-Commerce platform
+
+http://www.txungamoyo.com/wp-json/wp/v2/
+
+### Txungamoyo Imobiliaria http://imobiliaria.txungamoyo.com/ a RealEstate platform
+
+http://imobiliaria.txungamoyo.com/wp-json/wp/v2/
+
+Note 2: To create an Android client for each of these webapp you will need to understand the purpose of each of them. work with your lecturer. If any authorization or authentication is required, also ask your lecturer
+
+## Structure of the App
+A home screen with 10 items, it should allow to load more
+Each item, when clicked should show the details of such item 
+A settings page/view to change settings
+A search feature, to allow for searching of items
+A notifications mechanism to alert when new item is posted in the webapp/website
+
+Ask your lecturer for a demo / pay attention and take notes during the class on 27/09/2018
+
+
+## Submit your App to playstore
+
+There are requirements for that, so, again, work with your lecturer
+
+## Groups
+
+Up to 3 people on each group, two groups can work on the same assignment
+
+
+
+

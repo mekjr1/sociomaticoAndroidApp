@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item2" android:title="Internacional" android:icon="@drawable/world48dp"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item3" android:title="Sociedade" android:icon="@drawable/people48dp"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item4" android:title="Politica" android:icon="@drawable/politica48"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item5" android:title="Economia" android:icon="@drawable/economia48"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item6" android:title="Desporto" android:icon="@drawable/desporto48"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item7" android:title="Fama" android:icon="@drawable/fama48"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item8" android:title="Tecnologias" android:icon="@drawable/tecnologias48"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item9" android:title="Cultura" android:icon="@drawable/cultura1_48"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item10" android:title="Curiosidades" android:icon="@drawable/curiosidades_48"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item11" android:title="Definicões" android:icon="@drawable/settings_48"></item>
+
+
+
+
+</menu>

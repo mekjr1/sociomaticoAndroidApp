@@ -1,0 +1,13 @@
+1-Dropdown Menu
+2-Accao dos Botoes
+3- Layout das Publicacoes
+4-Definicoes
+4.1- Peresonalizar Cor
+4.2- 3Favoritos 
+4.3- UsaDados Moveis\wifi
+5-search
+6-filter
+7-Dynamic fragment TabLayout
+8-colocar Logo da SocioMatico na sidebar
+9-Icones
+
