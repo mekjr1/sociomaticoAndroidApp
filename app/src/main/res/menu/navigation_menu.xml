@@ -16,6 +16,7 @@
             <item android:onClick="abrirCategoria" android:id="@+id/nav_item9" android:title="Cultura" android:icon="@drawable/cultura1_48"></item>
             <item android:onClick="abrirCategoria" android:id="@+id/nav_item10" android:title="Curiosidades" android:icon="@drawable/curiosidades_48"></item>
             <item android:onClick="abrirCategoria" android:id="@+id/nav_item11" android:title="Definicões" android:icon="@drawable/settings_48"></item>
+            <item android:onClick="abrirCategoria" android:id="@+id/nav_item12" android:title="Sobre" android:icon="@drawable/ic_info_black_24dp"></item>
 
 
 

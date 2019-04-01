@@ -2,6 +2,7 @@ package ucm.ac.mz.sociomatico.Models;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
     public static class ImageTypeViewHolder extends RecyclerView.ViewHolder{
 
 
-        TextView title, subtitle;
+        TextView title, subtitle,data;
         ImageView imageView;
         public ImageTypeViewHolder(View itemView) {
             super(itemView);
@@ -57,6 +58,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
             this.title = (TextView)  itemView.findViewById(R.id.title);
             this.subtitle = (TextView) itemView.findViewById(R.id.subtitle);
             this.imageView = (ImageView) itemView.findViewById(R.id.Icon);
+            this.data = (TextView) itemView.findViewById(R.id.data);
         }
     }
     @Override
@@ -69,9 +71,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
         final Model object = dataset.get(position);
 
-        ( (ImageTypeViewHolder) holder).title.setText( object.title );
-        ( (ImageTypeViewHolder) holder).subtitle.setText( object.subtitle );
+        ( (ImageTypeViewHolder) holder).title.setText(Html.fromHtml(object.title) );
+        ( (ImageTypeViewHolder) holder).subtitle.setText( Html.fromHtml(object.subtitle) );
         Picasso.get().load(dataset.get(position).Image).into(( (ImageTypeViewHolder) holder).imageView);
+        ( (ImageTypeViewHolder) holder).data.setText(object.Data);
+
+
+
+
+
+
 
         ( (ImageTypeViewHolder) holder).title.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +91,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
                 intent.putExtra("titulo", ((ImageTypeViewHolder) holder).title.getText());
                 intent.putExtra("conteudo", dataset.get(position).content);
                 intent.putExtra("imagem", dataset.get(position).Image);
+                intent.putExtra("data", dataset.get(position).Data);
                mContext.startActivity(intent);
             }
         });
@@ -94,6 +104,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
                 intent.putExtra("titulo", ((ImageTypeViewHolder) holder).title.getText());
                 intent.putExtra("conteudo", dataset.get(position).content);
                 intent.putExtra("imagem", dataset.get(position).Image);
+                intent.putExtra("data", dataset.get(position).Data);
                mContext.startActivity(intent);
             }
         });
@@ -105,6 +116,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
                 intent.putExtra("titulo", ((ImageTypeViewHolder) holder).title.getText());
                 intent.putExtra("conteudo", dataset.get(position).content);
                 intent.putExtra("imagem", dataset.get(position).Image);
+                intent.putExtra("data", dataset.get(position).Data);
 
               mContext.startActivity(intent);
             }

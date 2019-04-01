@@ -4,6 +4,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 import retrofit2.http.Url;
 
 
@@ -13,7 +14,7 @@ public interface RetrofitArrayApi {
     //Call<List<WPPost>> getPostInfo();
     /// to make call to dynamic URL
      @GET
-     Call<List<WPPost>> getPostInfo(@Url String url);
+     Call<List<WPPost>> getPostInfo(@Url String url, @Query("page") int page);
 
     // @GET
     // Call<List<Media>> getListCall(@Url String url);

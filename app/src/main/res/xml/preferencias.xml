@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+<PreferenceCategory
+    android:key="font_size"
+    android:title="Tamanho da letra">
+
+<EditTextPreference
+    android:numeric="integer"
+    android:dialogTitle="Tamanho da letra"
+    android:dialogMessage="11-30"
+    ></EditTextPreference>
+
+
+</PreferenceCategory>
+
+</PreferenceScreen>

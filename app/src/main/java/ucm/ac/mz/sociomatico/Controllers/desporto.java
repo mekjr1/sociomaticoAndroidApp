@@ -37,7 +37,7 @@ import  ucm.ac.mz.sociomatico.Models.*;
  * Use the {@link categorias#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class tecnologia extends Fragment {
+public class desporto extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -49,7 +49,7 @@ public class tecnologia extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public tecnologia() {
+    public desporto() {
         // Required empty public constructor
     }
 
@@ -184,7 +184,7 @@ public class tecnologia extends Fragment {
         // to make call to dynamic URL
 
 
-        Call<List<WPPost>>  call = service.getPostInfo("http://www.sociomatico.com/wp-json/wp/v2/posts?categories=285&_embed=true",1);
+        Call<List<WPPost>>  call = service.getPostInfo("http://www.sociomatico.com/wp-json/wp/v2/posts?categories=140&_embed=true",1);
 
         call.enqueue(new Callback<List<WPPost>>() {
             @Override
@@ -193,6 +193,8 @@ public class tecnologia extends Fragment {
                 for (int i=0; i<response.body().size();i++){
                     Log.e("main ", " title "+ response.body().get(i).getTitle().getRendered() + " "+
                             response.body().get(i).getId());
+
+
 
 
                     String data = response.body().get(i).getDate();

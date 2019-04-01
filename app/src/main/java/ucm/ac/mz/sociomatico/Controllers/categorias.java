@@ -184,7 +184,7 @@ public class categorias extends Fragment {
         // to make call to dynamic URL
 
 
-        Call<List<WPPost>>  call = service.getPostInfo("http://www.sociomatico.com/wp-json/wp/v2/posts?categories=1062&_embed=true");
+        Call<List<WPPost>>  call = service.getPostInfo("http://www.sociomatico.com/wp-json/wp/v2/posts?categories=1062&_embed=true",1);
 
         call.enqueue(new Callback<List<WPPost>>() {
             @Override
@@ -197,17 +197,42 @@ public class categorias extends Fragment {
 
 
 
+                    String data = response.body().get(i).getDate();
+                    String datadef="";
+
+                    for(int k=0;k<data.length();k++){
+
+                        if(data.charAt(k)!='T'){
+                            datadef = datadef+data.charAt(k);
+                        }else{
+                            k=2000;
+                        }
+
+                    }
 
 
 
                     String tempdetails =  response.body().get(i).getExcerpt().getRendered().toString();
-                    tempdetails = tempdetails.replace("<p>","");
-                    tempdetails = tempdetails.replace("</p>","");
-                    tempdetails = tempdetails.replace("[&hellip;]","");
 
-                    list.add( new Model( Model.IMAGE_TYPE,  response.body().get(i).getTitle().getRendered(),
-                            tempdetails,
-                            response.body().get(i).getEmbedded().getWpFeaturedmedia().get(0).getSourceUrl(), response.body().get(i).getContent().getRendered()));
+
+                    try{
+
+
+                        list.add( new Model( Model.IMAGE_TYPE,  response.body().get(i).getTitle().getRendered(),
+                                tempdetails,
+                                response.body().get(i).getEmbedded().getWpFeaturedmedia().get(0).getSourceUrl(),
+                                response.body().get(i).getContent().getRendered(), datadef));
+
+                    }catch (Exception ex){
+
+                        list.add( new Model( Model.IMAGE_TYPE,  response.body().get(i).getTitle().getRendered(),
+                                tempdetails,
+                                "sem_foto",
+                                response.body().get(i).getContent().getRendered(), datadef));
+
+
+                    }
+
 
                 }
                 adapter.notifyDataSetChanged();

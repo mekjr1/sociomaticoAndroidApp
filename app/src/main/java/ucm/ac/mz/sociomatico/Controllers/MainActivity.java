@@ -1,5 +1,6 @@
 package ucm.ac.mz.sociomatico.Controllers;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -9,8 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import ucm.ac.mz.sociomatico.R;
+import ucm.ac.mz.sociomatico.Sobre;
 
 public class MainActivity extends AppCompatActivity implements cultura.OnFragmentInteractionListener, curiosidades.OnFragmentInteractionListener, tecnologia.OnFragmentInteractionListener, fama.OnFragmentInteractionListener, desporto.OnFragmentInteractionListener,economia.OnFragmentInteractionListener, politica.OnFragmentInteractionListener, categorias.OnFragmentInteractionListener, internacional.OnFragmentInteractionListener,sociedade.OnFragmentInteractionListener {
 
@@ -182,11 +185,24 @@ public class MainActivity extends AppCompatActivity implements cultura.OnFragmen
               break;
 
           case "Definicões":
+
+
+            Intent inte = new Intent(this, Definicoes_activity.class);
+              startActivity(inte);
+              break;          case "Sobre":
+
+              Intent in = new Intent(this, Sobre.class);
+              startActivity(in);
+
+
               break;
       }
 
 
   }
+
+
+
 
 
 

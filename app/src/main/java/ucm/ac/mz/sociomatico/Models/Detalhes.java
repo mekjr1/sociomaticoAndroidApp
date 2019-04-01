@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Html;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -43,18 +44,9 @@ public class Detalhes extends AppCompatActivity {
 
 
 
+        Picasso.get().load(imagem).into(img);
 
 
-
-
-
-
-
-
-
-
-
-       Picasso.get().load(imagem).into(img);
 
 
 
@@ -67,13 +59,10 @@ public class Detalhes extends AppCompatActivity {
         String subtitulo1 = i.getExtras().get("conteudo").toString();
 
 
-        subtitulo1 = subtitulo1.replace("<h3 style=\"text-align: justify;\">","");
-        subtitulo1 = subtitulo1.replace("<p style=\"text-align: justify;\">","");
-        subtitulo1 = subtitulo1.replace("</p>","\n");
-        subtitulo1 = subtitulo1.replace("</h3>","\n");
 
-        titulo.setText(titulo1);
-        subtitulo.setText(subtitulo1);
+
+        titulo.setText(Html.fromHtml(titulo1));
+        subtitulo.setText(Html.fromHtml(subtitulo1));
 
 
 

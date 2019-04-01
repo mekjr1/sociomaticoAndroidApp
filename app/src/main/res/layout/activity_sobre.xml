@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".Sobre">
+
+
+    <ImageView
+
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="42dp"
+        android:src="@drawable/icon" />
+
+
+    <TextView
+        android:id="@+id/Marca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:text="\u00A9 Sociomatico"
+        android:textColor="#fff"
+        android:textSize="30dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Marca"
+        android:layout_below="@+id/Marca"
+        android:text="V1.0   -    2019"
+        android:textColor="#ccc"
+        android:textSize="15dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/empresa"
+        android:layout_toStartOf="@+id/logo"
+        android:text="Desenvolvida por:"
+        android:textColor="#fff"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="351dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="194dp"
+        android:text="NM Technology Services and Solutions"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="30dp"
+        android:id="@+id/empresa"
+       />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="137dp"
+        android:layout_toStartOf="@+id/logo"
+        android:text="Desenvolvedores:"
+        android:textColor="#fff"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginBottom="95dp"
+        android:layout_marginStart="48dp"
+        android:text="Abdul Gafar Meque"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="54dp"
+        android:text="Kelven de Sousa"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_marginStart="48dp"
+        />
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
