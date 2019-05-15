@@ -10,16 +10,6 @@
     app:theme="@style/ThemeOverlay.AppCompat.Dark"
     >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-
-        android:src="@drawable/pesquisar_48"
-        android:layout_marginLeft="110dp"
-
-        />
-
 
 </android.support.v7.widget.Toolbar>
 

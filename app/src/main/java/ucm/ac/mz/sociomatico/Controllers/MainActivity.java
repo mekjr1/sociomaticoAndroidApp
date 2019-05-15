@@ -2,6 +2,7 @@ package ucm.ac.mz.sociomatico.Controllers;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements cultura.OnFragmen
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("SocioMatico");
         setSupportActionBar(toolbar);
 
 
@@ -40,8 +42,6 @@ public class MainActivity extends AppCompatActivity implements cultura.OnFragmen
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-
-
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -64,20 +64,19 @@ public class MainActivity extends AppCompatActivity implements cultura.OnFragmen
         tb.setTabMode(TabLayout.MODE_SCROLLABLE);
 
 
-       final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-       final ucm.ac.mz.sociomatico.Controllers.PagerAdapter adapter = new ucm.ac.mz.sociomatico.Controllers.PagerAdapter(getSupportFragmentManager(),tb.getTabCount());
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final ucm.ac.mz.sociomatico.Controllers.PagerAdapter adapter = new ucm.ac.mz.sociomatico.Controllers.PagerAdapter(getSupportFragmentManager(), tb.getTabCount());
 
-       viewPager.setAdapter(adapter);
+        viewPager.setAdapter(adapter);
         viewPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tb));
 
 
         tb.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
-            public void onTabSelected(TabLayout.Tab tab){
+            public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
             }
-
 
 
             @Override
@@ -93,22 +92,15 @@ public class MainActivity extends AppCompatActivity implements cultura.OnFragmen
     }
 
 
-
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)){
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
 
             item1 = item;
 
 
-
             return super.onOptionsItemSelected(item);
-
-
-
 
 
         }
@@ -118,101 +110,93 @@ public class MainActivity extends AppCompatActivity implements cultura.OnFragmen
     }
 
 
-
-  public void abrirCategoria(MenuItem v){
-
+    public void abrirCategoria(MenuItem v) {
 
 
-
-      TabLayout tb = findViewById(R.id.tablayout);
-      final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-      final ucm.ac.mz.sociomatico.Controllers.PagerAdapter adapter = new ucm.ac.mz.sociomatico.Controllers.PagerAdapter(getSupportFragmentManager(),tb.getTabCount());
-
-
-      switch (""+v.getTitle()){
-          case "Internacional":
-              viewPager.setAdapter(adapter);
-              viewPager.setCurrentItem(1);
-              onOptionsItemSelected(item1);
-              break;
-
-          case "Sociedade":
-              viewPager.setAdapter(adapter);
-              viewPager.setCurrentItem(2);
-              onOptionsItemSelected(item1);
-              break;
-
-          case "Politica":
-              viewPager.setAdapter(adapter);
-              viewPager.setCurrentItem(3);
-              onOptionsItemSelected(item1);
-              break;
-
-          case "Economia":
-              viewPager.setAdapter(adapter);
-              viewPager.setCurrentItem(4);
-              onOptionsItemSelected(item1);
-              break;
-
-          case "Desporto":
-              viewPager.setAdapter(adapter);
-              viewPager.setCurrentItem(5);
-              onOptionsItemSelected(item1);
-              break;
-
-          case "Fama":
-              viewPager.setAdapter(adapter);
-              viewPager.setCurrentItem(6);
-              onOptionsItemSelected(item1);
-              break;
-
-          case "Tecnologias":
-              viewPager.setAdapter(adapter);
-              viewPager.setCurrentItem(7);
-              onOptionsItemSelected(item1);
-              break;
-
-          case "Cultura":
-              viewPager.setAdapter(adapter);
-              viewPager.setCurrentItem(8);
-              onOptionsItemSelected(item1);
-              break;
-
-          case "Curiosidades":
-              viewPager.setAdapter(adapter);
-              viewPager.setCurrentItem(9);
-              onOptionsItemSelected(item1);
-              break;
-
-          case "Definicões":
+        TabLayout tb = findViewById(R.id.tablayout);
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final ucm.ac.mz.sociomatico.Controllers.PagerAdapter adapter = new ucm.ac.mz.sociomatico.Controllers.PagerAdapter(getSupportFragmentManager(), tb.getTabCount());
 
 
-            Intent inte = new Intent(this, Definicoes_activity.class);
-              startActivity(inte);
-              break;          case "Sobre":
+        switch ("" + v.getTitle()) {
+            case "Internacional":
+                viewPager.setAdapter(adapter);
+                viewPager.setCurrentItem(1);
+                onOptionsItemSelected(item1);
+                break;
 
-              Intent in = new Intent(this, Sobre.class);
-              startActivity(in);
+            case "Sociedade":
+                viewPager.setAdapter(adapter);
+                viewPager.setCurrentItem(2);
+                onOptionsItemSelected(item1);
+                break;
+
+            case "Politica":
+                viewPager.setAdapter(adapter);
+                viewPager.setCurrentItem(3);
+                onOptionsItemSelected(item1);
+                break;
+
+            case "Economia":
+                viewPager.setAdapter(adapter);
+                viewPager.setCurrentItem(4);
+                onOptionsItemSelected(item1);
+                break;
+
+            case "Desporto":
+                viewPager.setAdapter(adapter);
+                viewPager.setCurrentItem(5);
+                onOptionsItemSelected(item1);
+                break;
+
+            case "Fama":
+                viewPager.setAdapter(adapter);
+                viewPager.setCurrentItem(6);
+                onOptionsItemSelected(item1);
+                break;
+
+            case "Tecnologias":
+                viewPager.setAdapter(adapter);
+                viewPager.setCurrentItem(7);
+                onOptionsItemSelected(item1);
+                break;
+
+            case "Cultura":
+                viewPager.setAdapter(adapter);
+                viewPager.setCurrentItem(8);
+                onOptionsItemSelected(item1);
+                break;
+
+            case "Curiosidades":
+                viewPager.setAdapter(adapter);
+                viewPager.setCurrentItem(9);
+                onOptionsItemSelected(item1);
+                break;
+
+            case "Definicões":
 
 
-              break;
-      }
+                Intent inte = new Intent(this, Definicoes_activity.class);
+                startActivity(inte);
+                break;
+            case "Sobre":
+
+                Intent in = new Intent(this, Sobre.class);
+                startActivity(in);
 
 
-  }
+                break;
+        }
 
 
-
-
-
-
+    }
 
 
     @Override
     public void onFragmentInteraction(Uri uri) {
 
 
-
-
     }
 }
+
+
